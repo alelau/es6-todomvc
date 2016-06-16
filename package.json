@@ -10,7 +10,11 @@
     "eslint-config-kentcdodds": "6.2.1",
     "ghooks": "1.2.4",
     "http-server": "0.9.0",
-    "opt-cli": "1.5.1"
+    "npm-run-all": "2.2.2",
+    "opt-cli": "1.5.1",
+    "webpack": "2.1.0-beta.15",
+    "webpack-dev-server": "2.1.0-beta.0",
+    "webpack-validator": "2.2.0"
   },
   "config": {
     "ghooks": {
@@ -18,8 +22,11 @@
     }
   },
   "scripts": {
-    "validate": "npm run lint",
-    "start": "http-server --silent -c-1",
+    "build": "webpack --env.prod -p",
+    "build:dev": "webpack --env.dev",
+    "start": "http-server",
+    "dev": "webpack-dev-server --env.dev",
+    "validate": "npm-run-all --parallel lint build",
     "lint": "eslint .",
     "setup": "npm install && npm run validate"
   }
