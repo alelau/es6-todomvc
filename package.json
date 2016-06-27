@@ -11,6 +11,7 @@
     "babel-preset-es2015-webpack": "6.4.1",
     "babel-preset-es2016": "6.11.0",
     "babel-preset-stage-2": "6.11.0",
+    "css-loader": "0.23.1",
     "eslint": "2.13.1",
     "eslint-config-kentcdodds": "6.2.1",
     "ghooks": "1.2.4",
@@ -18,6 +19,7 @@
     "npm-run-all": "2.2.2",
     "opt-cli": "1.5.1",
     "webpack": "2.1.0-beta.15",
+    "style-loader": "0.13.1",
     "webpack-dev-server": "2.1.0-beta.0",
     "webpack-validator": "2.2.0"
   },

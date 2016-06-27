@@ -14,6 +14,7 @@ module.exports = env => {
     module: {
       loaders: [
         {test: /\.js$/, loaders: ['babel'], exclude: /node_modules/},
+        {test: /\.css$/, loaders: ['style', 'css']},
       ],
     },
   })
