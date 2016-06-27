@@ -11,5 +11,10 @@ module.exports = env => {
     },
     context: resolve(__dirname, 'src'),
     devtool: env.prod ? 'source-map' : 'eval',
+    module: {
+      loaders: [
+        {test: /\.js$/, loaders: ['babel'], exclude: /node_modules/},
+      ],
+    },
   })
 }

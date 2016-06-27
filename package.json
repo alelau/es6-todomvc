@@ -5,7 +5,12 @@
     "todomvc-common": "1.0.2"
   },
   "devDependencies": {
+    "babel-core": "6.10.4",
     "babel-eslint": "6.1.0",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015-webpack": "6.4.1",
+    "babel-preset-es2016": "6.11.0",
+    "babel-preset-stage-2": "6.11.0",
     "eslint": "2.13.1",
     "eslint-config-kentcdodds": "6.2.1",
     "ghooks": "1.2.4",
