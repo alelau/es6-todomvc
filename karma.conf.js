@@ -9,6 +9,7 @@ module.exports = config => {
     basePath: '',
     frameworks: ['mocha', 'chai'],
     files: [testGlob, srcGlob],
+    exclude: ['src/app.js'],
     preprocessors: {
       [testGlob]: ['webpack'],
       [srcGlob]: ['webpack'],

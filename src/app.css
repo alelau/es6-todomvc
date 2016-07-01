@@ -1,0 +1,7 @@
+.toggle-graph {
+  float: left;
+  margin-left: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
