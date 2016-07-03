@@ -4,16 +4,24 @@ import './app.css'
 
 import {$on} from './helpers'
 import {updateTodo} from './todo'
-import {toggleGraph} from './graph'
+import {toggleGraph} from './graph/index'
 
 $on(window, 'load', onLoad)
 $on(window, 'hashchange', updateTodo)
 
 function onLoad() {
   updateTodo()
+  const toggleGraphButton = document.querySelector('.toggle-graph')
   $on(
-    document.querySelector('.toggle-graph'),
+    toggleGraphButton,
     'click',
-    toggleGraph,
+    () => {
+      const active = toggleGraph()
+      if (active) {
+        toggleGraphButton.classList.add('active')
+      } else {
+        toggleGraphButton.classList.remove('active')
+      }
+    },
   )
 }

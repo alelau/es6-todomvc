@@ -5,3 +5,16 @@
   position: relative;
   z-index: 1;
 }
+.toggle-graph svg {
+  height: 20px;
+  width: 20px;
+}
+.toggle-graph svg path {
+  fill: #777;
+}
+
+.toggle-graph.active svg path,
+.toggle-graph:hover svg path,
+.toggle-graph:focus svg path {
+  fill: black;
+}

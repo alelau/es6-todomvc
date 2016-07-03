@@ -3,6 +3,7 @@ import Controller from './controller'
 import Model from './model'
 import Store from './store'
 import Template from './template'
+import {remove} from './helpers'
 
 export {updateTodo, getTodo, subscribe}
 
@@ -37,12 +38,4 @@ function subscribe(cb) {
   return function unsubscribe() {
     remove(subscribers, cb)
   }
-}
-
-function remove(array, thing) {
-  const index = array.indexOf(thing)
-  if (index === -1) {
-    return array
-  }
-  array.splice(index, 1)
 }

@@ -1,8 +1,12 @@
 {
   "private": true,
   "dependencies": {
+    "d3": "3.5.17",
+    "lodash": "4.13.1",
     "query-string": "4.2.2",
-    "react": "15.2.0",
+    "rd3": "0.6.4",
+    "react": "15.1.0",
+    "react-dom": "15.1.0",
     "todomvc-app-css": "2.0.6",
     "todomvc-common": "1.0.2"
   },
@@ -50,7 +54,7 @@
     "dev": "webpack-dev-server --env.dev",
     "test": "karma start",
     "watch:test": "npm test -- --auto-watch --no-single-run",
-    "check-coverage": "istanbul check-coverage --statements 21 --branches 5 --functions 9 --lines 22",
+    "check-coverage": "istanbul check-coverage --statements 11 --branches 0 --functions 0 --lines 12",
     "validate": "npm-run-all --parallel lint build test --serial check-coverage",
     "lint": "eslint .",
     "setup": "npm install && npm run validate"
