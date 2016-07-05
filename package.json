@@ -20,6 +20,7 @@
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-2": "6.11.0",
     "chai": "3.5.0",
+    "cpy-cli": "1.0.1",
     "css-loader": "0.23.1",
     "eslint": "2.13.1",
     "eslint-config-kentcdodds": "6.2.1",
@@ -51,6 +52,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
+    "postbuild": "cpy favicon.ico dist",
     "build": "webpack --env.prod -p",
     "build:dev": "webpack --env.dev",
     "start": "http-server dist",
