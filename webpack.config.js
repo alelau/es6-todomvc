@@ -2,6 +2,7 @@ const {resolve} = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackValidator = require('webpack-validator')
+const OfflinePlugin = require('offline-plugin')
 module.exports = env => {
   const specifyProp = (add, value) => add ? value : undefined
   const ifProd = value => specifyProp(env.prod, value)
@@ -37,6 +38,7 @@ module.exports = env => {
         template: './index.html',
         inject: 'head',
       }),
+      ifProd(new OfflinePlugin()),
     ]),
   })
 }
