@@ -26,6 +26,7 @@
     "eslint-import-resolver-webpack": "0.3.1",
     "eslint-plugin-react": "5.2.2",
     "ghooks": "1.2.4",
+    "html-webpack-plugin": "2.22.0",
     "http-server": "0.9.0",
     "istanbul": "0.4.4",
     "karma": "1.1.0",
@@ -37,6 +38,7 @@
     "mocha": "2.5.3",
     "npm-run-all": "2.2.2",
     "opt-cli": "1.5.1",
+    "rimraf": "2.5.3",
     "style-loader": "0.13.1",
     "webpack": "2.1.0-beta.15",
     "webpack-dev-server": "2.1.0-beta.0",
@@ -48,9 +50,10 @@
     }
   },
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "webpack --env.prod -p",
     "build:dev": "webpack --env.dev",
-    "start": "http-server",
+    "start": "http-server dist",
     "dev": "webpack-dev-server --env.dev",
     "test": "karma start",
     "watch:test": "npm test -- --auto-watch --no-single-run",
