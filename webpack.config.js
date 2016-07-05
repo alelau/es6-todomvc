@@ -3,8 +3,8 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackValidator = require('webpack-validator')
 module.exports = env => {
-  const addPlugin = (add, plugin) => add ? plugin : undefined
-  const ifProd = plugin => addPlugin(env.prod, plugin)
+  const specifyProp = (add, value) => add ? value : undefined
+  const ifProd = value => specifyProp(env.prod, value)
   const removeEmpty = array => array.filter(i => !!i)
   return webpackValidator({
     entry: {
